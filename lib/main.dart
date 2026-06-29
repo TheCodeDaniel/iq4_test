@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iq_test/features/transactions/presentation/bloc/products_bloc.dart';
 import 'package:iq_test/core/services/local_storage/product_cache_services.dart';
-import 'package:iq_test/views/pin_lock_view.dart';
+import 'package:iq_test/features/auth/pin_lock_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +20,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: PinLockView(), debugShowCheckedModeBanner: false, theme: ThemeData(useMaterial3: false));
+    return MultiBlocProvider(
+      providers: [BlocProvider(create: (_) => ProductsBloc())],
+      child: MaterialApp(home: PinLockView(), debugShowCheckedModeBanner: false, theme: ThemeData(useMaterial3: false)),
+    );
   }
 }

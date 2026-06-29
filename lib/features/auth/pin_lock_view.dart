@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iq_test/core/widgets/custom_pin_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:iq_test/extensions/navigation_extensions.dart';
-import 'package:iq_test/views/transactions_list_view.dart';
+import 'package:iq_test/core/extensions/navigation_extensions.dart';
+import 'package:iq_test/features/transactions/presentation/views/transactions_list_view.dart';
 
 class PinLockView extends StatefulWidget {
   const PinLockView({super.key});

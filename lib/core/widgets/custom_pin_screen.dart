@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iq_test/extensions/context_extensions.dart';
+import 'package:iq_test/core/extensions/context_extensions.dart';
 import 'package:iconsax/iconsax.dart';
 
 class CustomPinScreen extends StatefulWidget {
