@@ -42,6 +42,7 @@ dependencies:
   hive_flutter: ^1.1.0
   fluttertoast: ^9.1.0
   iconsax: ^0.0.8
+  intl: ^0.20.3
 
 dev_dependencies:
   flutter_test:

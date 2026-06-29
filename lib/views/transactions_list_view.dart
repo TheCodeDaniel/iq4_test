@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iq_test/core/widgets/transactions_list_tile.dart';
 
 class TransactionsListView extends StatefulWidget {
   const TransactionsListView({super.key});
@@ -17,6 +18,13 @@ class _TransactionsListViewState extends State<TransactionsListView> {
           backgroundColor: Colors.white,
           elevation: 0,
           title: Text("Your Transactions", style: TextStyle(color: Colors.black)),
+        ),
+        body: SafeArea(
+          child: Column(
+            children: [
+              Expanded(child: ListView.builder(itemBuilder: (context, index) => TransactionsListTile(), itemCount: 5)),
+            ],
+          ),
         ),
       ),
     );
