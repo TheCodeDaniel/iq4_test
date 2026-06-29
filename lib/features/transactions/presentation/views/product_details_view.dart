@@ -13,8 +13,21 @@ class ProductDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Material(
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: GestureDetector(
+          onTap: () => Navigator.of(context).pop(),
+          child: Icon(Icons.arrow_back_ios, color: Colors.black),
+        ),
+        title: Text(
+          product.brand,
+          style: theme.textTheme.titleMedium?.copyWith(color: Colors.black),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      body: SingleChildScrollView(
         padding: const EdgeInsets.only(bottom: 32),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

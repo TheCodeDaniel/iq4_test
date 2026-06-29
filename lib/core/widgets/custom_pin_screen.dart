@@ -64,7 +64,7 @@ class _CustomPinScreenState extends State<CustomPinScreen> {
           margin: EdgeInsets.symmetric(horizontal: 8.0),
           width: context.isSmallPhone ? 14 : 16,
           height: context.isSmallPhone ? 14 : 16,
-          decoration: BoxDecoration(shape: BoxShape.circle, color: filled ? Colors.purple : Colors.grey[300]),
+          decoration: BoxDecoration(shape: BoxShape.circle, color: filled ? Colors.blue : Colors.grey[300]),
         ),
       );
     }
