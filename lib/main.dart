@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:iq_test/core/services/local_storage/product_cache_services.dart';
 import 'package:iq_test/views/pin_lock_view.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ProductCacheService.init();
   runApp(const MyApp());
 }
 
