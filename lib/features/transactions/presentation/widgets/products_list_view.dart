@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iq_test/core/extensions/navigation_extensions.dart';
 import 'package:iq_test/core/widgets/empty_state.dart';
 import 'package:iq_test/core/widgets/error_state.dart';
 import 'package:iq_test/core/widgets/product_card.dart';
@@ -8,6 +9,7 @@ import 'package:iq_test/core/widgets/staggered_list_item.dart';
 import 'package:iq_test/features/transactions/presentation/bloc/product_events.dart';
 import 'package:iq_test/features/transactions/presentation/bloc/products_bloc.dart';
 import 'package:iq_test/features/transactions/presentation/bloc/products_state.dart';
+import 'package:iq_test/features/transactions/presentation/views/product_details_view.dart';
 
 class ProductsListView extends StatelessWidget {
   final ScrollController scrollController;
@@ -57,7 +59,7 @@ class ProductsListView extends StatelessWidget {
                       product: product,
                       isSelected: product.id == selectedProductId,
                       onTap: () {
-                        onProductSelected?.call(product.id);
+                        context.push(ProductDetailsView(product: product));
                       },
                     ),
                   );
